@@ -1,0 +1,21 @@
+public class Palindrome 
+{
+    public static void main(String[] args) // основной метод main
+    {
+        for (int i = 0; i < args.length; i++) // перебор аргументов для записи
+        {
+            String word = args[i]; // запись слова из аргументов
+            System.out.println(word + " " + word.equals(reverseString(word))); // вывод результата
+        }
+    }
+
+    public static String reverseString(String str) // метод REverseString, принимает строку str и возвращает перевернутую версию
+    {
+        String temp = ""; // временный контейнер для записи перевернутого str
+        for (int i = str.length() - 1; i >= 0; i--) // перебор всех букв в str с конца в начало
+        {
+            temp += str.charAt(i); // добавляем в temp по букве
+        }
+        return temp;
+    }
+}
