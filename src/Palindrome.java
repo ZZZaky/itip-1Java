@@ -5,7 +5,7 @@ public class Palindrome
         for (int i = 0; i < args.length; i++) // перебор аргументов для записи
         {
             String word = args[i]; // запись слова из аргументов
-            System.out.println(word + " " + word.equals(reverseString(word))); // вывод результата
+            System.out.println(word + " " + isPalindrome(word)); // вывод результата
         }
     }
 
@@ -17,5 +17,10 @@ public class Palindrome
             temp += str.charAt(i); // добавляем в temp по букве
         }
         return temp;
+    }
+
+    public static boolean isPalindrome(String word) // метод isPalindrome, принимает строку word
+    {
+        return word.equals(reverseString(word)); // если word равен своей перевернутой версии, то возвращается true, в другом случае false
     }
 }

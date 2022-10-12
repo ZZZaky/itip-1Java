@@ -7,7 +7,11 @@ public class Primes
         {
             if(isPrime(num)) // проверка на простое число
             {
-                System.out.println(num); // вывод числа
+                System.out.println(num + " is prime"); // вывод числа
+            }
+            else
+            {
+                System.out.println(num + " not prime");
             }
         }
     }
